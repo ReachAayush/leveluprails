@@ -1,0 +1,85 @@
+Aayush Agarwal
+Written Solutions for Linux Excercies
+Leveluprails.com
+
+--Absolute and Relative Paths
+1. cd /Applications, cd ~/Documents
+2. cd ~; pwd
+3. cd ...; pwd
+
+--Everything is a File
+1. /doc/random
+2. sockets, pipes
+3. the output of the pid file is:
+1808
+/usr/local/var/postgres
+1433276011
+5432
+/tmp
+localhost
+  5432001   1179648
+
+--Path and the Environment
+1. printenv | grep "EDITOR"
+2. echo $PATH
+3. which ruby
+
+--Transferring Files between Boxes
+1. scp aagarwal.txt aayush@aayushserver.com:/home/aayush/tmp
+2. rm aagarwal.txt; scp aayush@aayushserver.com:/home/aayush/tmp/aagarwal.txt .
+
+--Git. Just Git.
+1. Completed the try git excercise.
+2. Forked to ReachAayush/level_up_excercises. 
+3. Created a pull request from branch just_git to master for ReachAayush/level_up_excercises.
+4. Didn't have a pairing partner.
+
+--Managing File Permissions
+1. -rw-r--r-- are the permissions for when a file was created using touch in the /tmp directory. This means that I can read & write, group can read, world can read. 
+2. chown root new_file.txt; i don't know what root group means.
+3. chmod 777 new_file.txt
+4. chmod g=r new_file.txt
+
+--Why you shouldn't use sudo
+1. ifconfig
+2. sudo rm -rf /
+
+--Monitoring System Resources
+1. df -H
+2. cd ~; du -h
+3. sudo htop
+4. Done.
+
+--Whats a port and how to find it
+1. netstat -l
+2. netstat -ap | grep sshd
+3. ssh/scp - port 22
+   http - port 80
+   https - port 443
+   postgres - port 5432
+
+Finding, Pausing, and Killing Processes
+1. it didn't return anything and I used control-c to kill it.
+2. ruby -e 'sleep 1 while true' &
+3. fg; ctrl+z; bg
+4. ps -ef; PID is 1994.
+5. kill %1 because it was the only job running
+
+Starting and Stopping Services
+1. /etc/init.d/
+2. /etc/init.d/nginx reload
+
+Monitoring Production Hardware
+1. Internet connectivity, databases, servers
+2. have a counter for amount of time there is a spike in usage and if it exceeds a certain threshold then it is probably a problem.
+
+Why We Use Web Proxies
+1. customer <--> asm <--> lb <--> compression engine <--> web
+2. we can prevent attacks which increases uptime.
+
+Managing Server Time (NTP)
+1. sudo ntpdate -u pool.ntp.org
+
+Firewalls, iptables, nmap
+1. cat /etc/sysconfig/iptables
+2. There is a greater likelihood that a whitelist contains only good hosts compared to a blacklist containing a bad host.
