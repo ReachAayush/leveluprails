@@ -1,0 +1,7 @@
+Aayush Agarwal
+Ruby Excercises
+Leveluprails
+
+5 Second Code Review
+
+The purpose of the 5 second code review is to make code obvious rather than hide functionality behind complexity. Basically, if someone can't understand a small chunck of your code in about 5 seconds, it is not obvious enough and fails the 5 second code review test.
